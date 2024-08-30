@@ -61,6 +61,37 @@ of macOS Big Sur (11.5.2) on 2021-08-21.
      cabal run triangle
      ```
 
+### Potential Fixes (tested on an M3 MacBook Pro)
+
+  1. Install the correct LLVM version
+
+      If you face the following error during the build-process:
+
+      ```sh
+      <no location info>: error:
+          Warning: Couldn't figure out LLVM version!
+                   Make sure you have installed LLVM between [9 and 13)
+      ghc: could not execute: opt
+      cabal: Failed to build wgpu-raw-hs-0.4.0.0 (which is required by
+      exe:triangle-glfw from wgpu-hs-0.4.0.0).
+      ```
+
+      You need to make sure the correct LLVM version is installed. It can be installed with:
+
+      ```sh
+      brew install llvm@12
+      # make sure to add it to your path:
+      export PATH=$PATH:/opt/homebrew/opt/llvm@12/bin/
+      ```
+
+  1. Add the Dylib to correct path:
+
+        If you are still getting a linking error, try adding it to `DYLD_LIBRARY_PATH` instead of `LD_LIBRARY_PATH`:
+
+        ```sh
+        export DYLD_LIBRARY_PATH=$(pwd)/wgpu-raw-hs-codegen/wgpu-native/target/debug/:$DYLD_LIBRARY_PATH
+        ```
+
 ![triangle demo](triangle-demo.png)
 
 ## Microsoft Windows
