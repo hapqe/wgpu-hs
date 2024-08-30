@@ -20,7 +20,7 @@ of macOS Big Sur (11.5.2) on 2021-08-21.
      `ghcup`. You may need to run the install command twice, the second time
      after being prompted to install the XCode command line tools. Instructions
      will be displayed in the terminal. You may need to use `ghcup tui` to
-     select an appropriate GHC version (GHC 8.10.5).
+     select an appropriate GHC version (GHC 8.10.7) and Cabal version (Cabal 3.4). 
 
   1. Install the [Homebrew](https://brew.sh/) package manager.
 
@@ -81,7 +81,7 @@ of Windows 10 on 2021-08-21.
   1. Install the [Haskell toolchain](https://www.haskell.org/ghcup/) using
      `ghcup`. `HLS` and `Stack` are optional installations, but make sure to
      install `MSys2`. You may need to use `ghcup tui` to select an appropriate
-     GHC version (GHC 8.10.5).
+     GHC version (GHC 8.10.7) and Cabal version (Cabal 3.4). 
      
   1. Install the [Chocolatey](https://chocolatey.org/) package manager.
 
@@ -166,7 +166,7 @@ These instructions were tested manually in a fresh installation of Ubuntu Linux
 
   1. Install the [Haskell toolchain](https://www.haskell.org/ghcup/) using
      `ghcup`. You may need to use `ghcup tui` to select an appropriate GHC
-     version (GHC 8.10.5).
+     version (GHC 8.10.7) and Cabal version (Cabal 3.4). 
 
 ### Build and Run an Example
 
